@@ -1,4 +1,4 @@
-name: My Python Linting
+name: My Python Lint
 
 on:
   push:
@@ -15,10 +15,10 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4  # Mise à jour vers v4
 
     - name: Set up Python
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v5  # Mise à jour vers v5
       with:
         python-version: '3.x'
 
@@ -34,4 +34,3 @@ jobs:
     - name: Run Ruff
       run: |
         ruff .
-
